@@ -33,14 +33,14 @@ jobs:
 
     steps:
 
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Building application
-      run: |
-        chmod +x $GITHUB_WORKSPACE/ci/build.sh
-        $GITHUB_WORKSPACE/ci/build.sh
+      - name: Building application
+        run: |
+          chmod +x $GITHUB_WORKSPACE/ci/build.sh
+          $GITHUB_WORKSPACE/ci/build.sh
 
-    - name: Deploying application
-      run: |
-        chmod +x $GITHUB_WORKSPACE/ci/deploy.sh
-        $GITHUB_WORKSPACE/ci/deploy.sh
+      - name: Deploying application
+        run: |
+          chmod +x $GITHUB_WORKSPACE/ci/deploy.sh
+          $GITHUB_WORKSPACE/ci/deploy.sh
