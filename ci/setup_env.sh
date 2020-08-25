@@ -3,6 +3,6 @@
 ORIGINAL_DIR=$PWD
 
 cd react-app
-npm run test
+npm install
 
 cd $ORIGINAL_DIR
