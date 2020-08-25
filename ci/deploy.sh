@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-ORIGINAL_DIR = $PWD
+ORIGINAL_DIR=$PWD
 
 S3_URL=s3://www.ci-test.com
 

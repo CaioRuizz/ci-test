@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-ORIGINAL_DIR = $PWD
+ORIGINAL_DIR=$PWD
 
 cd react-app
 npm run test
