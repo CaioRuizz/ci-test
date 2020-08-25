@@ -32,8 +32,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - uses: actions/checkout@v2
+
+      - name: Setting up environment
+        run: |
+          chmod +x $GITHUB_WORKSPACE/ci/setup_env.sh
+          $GITHUB_WORKSPACE/ci/setup_env.sh
 
       - name: Building application
         run: |
