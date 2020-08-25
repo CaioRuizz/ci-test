@@ -1,4 +1,4 @@
 echo ls
 ls
-echo PWD
+echo var PWD
 echo $PWD
