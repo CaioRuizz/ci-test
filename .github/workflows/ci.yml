@@ -40,10 +40,10 @@ jobs:
           chmod +x $GITHUB_WORKSPACE/ci/setup_env.sh
           $GITHUB_WORKSPACE/ci/setup_env.sh
       
-      - name: Deploy application
+      - name: Build application
         run: |
-          chmod +x $GITHUB_WORKSPACE/ci/deploy.sh
-          $GITHUB_WORKSPACE/ci/deploy.sh
+          chmod +x $GITHUB_WORKSPACE/ci/build.sh
+          $GITHUB_WORKSPACE/ci/build.sh
 
       - name: Deploy application
         run: |
