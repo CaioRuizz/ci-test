@@ -33,18 +33,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
 
       - name: Setting up environment
         run: |
           chmod +x $GITHUB_WORKSPACE/ci/setup_env.sh
           $GITHUB_WORKSPACE/ci/setup_env.sh
 
-      - name: Building application
-        run: |
-          chmod +x $GITHUB_WORKSPACE/ci/build.sh
-          $GITHUB_WORKSPACE/ci/build.sh
-
-      - name: Deploying application
+      - name: Building adn deploying application
         run: |
           chmod +x $GITHUB_WORKSPACE/ci/deploy.sh
           $GITHUB_WORKSPACE/ci/deploy.sh
